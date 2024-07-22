@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# Library Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Library Management System built with React for the frontend and a RESTful API for the backend. The system allows you to manage books, members, and borrowed books.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- View a list of books, members, and borrowed books.
+- Add new books and members.
+- Borrow books and return them.
+- Delete books.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React
+- **Backend:** Node.js, Express
+- **Database:** MongoDB (or any preferred database)
+- **HTTP Client:** Axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+### Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
 
-### `npm run build`
+    ```bash
+    git clone https://github.com/daxeshchothani/library-management-frontend.git
+    cd library-management-system
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Navigate to the `backend` directory:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    cd backend
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Install the dependencies:**
 
-### `npm run eject`
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Create a `.env` file in the `backend` directory and add your MongoDB URI and any other environment variables:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```env
+    your Url
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. **Start the backend server:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    npm start
+    ```
 
-## Learn More
+### Frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Navigate to the `frontend` directory:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    cd frontend
+    ```
 
-### Code Splitting
+2. **Install the dependencies:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    npm install
+    ```
 
-### Analyzing the Bundle Size
+3. **Create a `.env` file in the `frontend` directory and add your API URL:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```env
+    REACT_APP_API_URL=http://localhost:5000
+    ```
 
-### Making a Progressive Web App
+4. **Start the frontend server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```bash
+    npm start
+    ```
 
-### Advanced Configuration
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Once the servers are running, you can access the application at `http://localhost:3000`. The backend server will be running at `http://localhost:5000`.
 
-### Deployment
+### Book Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **View Books:** Navigate to the "Books" tab to see a list of books.
+- **Add Book:** Use the form to add a new book.
+- **Delete Book:** Click the "Delete" button next to a book to remove it from the list.
 
-### `npm run build` fails to minify
+### Member Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **View Members:** Navigate to the "Members" tab to see a list of members.
+- **Add Member:** Use the form to add a new member.
+
+### Borrowed Books
+
+- **View Borrowed Books:** Navigate to the "Borrowed Books" tab to see a list of borrowed books.
+- **Borrow Book:** Use the form to borrow a book.
+- **Return Book:** Click the "Return" button next to a borrowed book to mark it as returned.
+
+## API Endpoints
+
+The backend provides the following API endpoints:
+
+### Books
+
+- **GET /books:** Get a list of all books.
+- **POST /books:** Add a new book.
+- **DELETE /books/:id:** Delete a book by ID.
+
+### Members
+
+- **GET /members:** Get a list of all members.
+- **POST /members:** Add a new member.
+
+### Borrowed Books
+
+- **GET /borrowed-books:** Get a list of all borrowed books.
+- **POST /borrowed-books:** Borrow a book.
+- **PUT /borrowed-books/:id/return:** Mark a borrowed book as returned.
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
+
+
+
+## Contact
+
+If you have any questions or feedback, feel free to contact us at daxeshchothani.com.
+
