@@ -12,8 +12,8 @@ This is a simple Library Management System built with React for the frontend and
 ## Technologies Used
 
 - **Frontend:** React
-- **Backend:** Node.js, Express
-- **Database:** MongoDB (or any preferred database)
+- **Backend:** Flask
+- **Database:** SQLite (or any preferred database)
 - **HTTP Client:** Axios
 
 ## Installation
